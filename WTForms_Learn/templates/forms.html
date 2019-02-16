@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Demo</title>
+</head>
+<body>
+    <h1>用户注册</h1>
+    <form action="{{ url_for('submit') }}", method="post">
+        用户名：<input type="text" name="user_name" placeholder="enter your user name"><br>
+        密码：<input type="password" name="password" placeholder="enter your password"><br>
+        确认密码：<input type="password" name="confirm_password" placeholder="confirm password"><br>
+        性别：
+            <input type="radio" name="gender" value="male" checked>男
+            <input type="radio" name="gender" value="female">女<br>
+        出生日期：<input type="date" name="birthday"><br>
+        专业：
+            <select name="major">
+                <option value="cs">计算机科学与技术</option>
+                <option value="ne">网络工程</option>
+                <option value="se">软件工程</option>
+                <option value="ec">电子商务</option>
+                <option value="et">教育技术</option>
+            </select><br>
+        电子邮箱：<input type="email" name="email"><br>
+        兴趣爱好：
+            <input type="checkbox" name="sport" value="sp">运动
+            <input type="checkbox" name="game" value="ga">游戏
+            <input type="checkbox" name="study" value="st">学习<br>
+        选择头像：<input type="file" name="file"><br>
+        喜欢颜色：<input type="color" name="color"><br>
+        自我介绍：<br>
+            <textarea name="introduction"></textarea><br>
+        <input type="reset">
+        <input type="submit">
+    </form>
+</body>
+</html>
